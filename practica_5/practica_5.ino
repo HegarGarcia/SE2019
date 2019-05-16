@@ -20,7 +20,7 @@ float temp = 0;
 int refreshTime = 0;
 
 void setup() {
-  DDRB = 0xFF, DDRC = 0x0;
+  DDRB = 0xFF, DDRC = 0x0, DDRD = DDRD | 0xE0;
   Serial.begin(9600);
   timer.every(30, showTemp);
   Serial.println("Ingresa el tiempo de chequeo:");
